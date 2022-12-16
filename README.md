@@ -78,7 +78,18 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ## Starting ##
 
-For clone and use this project, you need access [here](README-NESTJS.md) and follow steps
+- Access your terminal
+- Execute commands bellow:
+
+  ```bash
+  # clone project
+  $ git clone https://github.com/andrelinos/notifications-service.git
+
+  # Access project folder 
+  cd notifications-service
+  ```
+
+- Access [here](README-NESTJS.md) and follow steps to continue
 
 ## The server will initialize in the <http://localhost:3000>
 
