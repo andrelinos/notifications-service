@@ -1,9 +1,5 @@
 <div align="center" id="top">
   <img src="./.github/print.png" alt="Notifications Service" />
-
-  &#xa0;
-
-  <!-- <a href="https://notificationsservice.netlify.app">Demo</a> -->
 </div>
 
 <h1 align="center">Notifications Service</h1>

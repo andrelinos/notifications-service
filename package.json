@@ -1,10 +1,10 @@
 {
   "name": "notifications-service",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Developed during Rocketseat Education's Ignite Lab Classes by @rocketseat-education",
+  "author": "Andrelino Silva",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

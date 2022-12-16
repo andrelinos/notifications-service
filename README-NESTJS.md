@@ -62,6 +62,10 @@ $ npm run test:watch
 $ npm run test:cov
 ```
 
+<div align="center" id="top">
+  <img src="./.github/test.png" alt="Test Notifications Service" />
+</div>
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
