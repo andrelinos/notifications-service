@@ -1,5 +1,5 @@
 <div align="center" id="top">
-  <img src="./.github/app.gif" alt="Notifications Service" />
+  <img src="./.github/print.png" alt="Notifications Service" />
 
   &#xa0;
 
@@ -51,7 +51,7 @@ This project aims to create and manage the notifications of a system in an organ
 ## Features ##
 
 :heavy_check_mark: Create notification;\
-:heavy_check_mark: List notification recipient by id 2;\
+:heavy_check_mark: List notification recipient by id;\
 :heavy_check_mark: Count notifications from recipient id;\
 :heavy_check_mark: Get recipient data from notification id;\
 :heavy_check_mark: Cancel notification by id;\
@@ -97,7 +97,33 @@ For clone and use this project, you need access [here](README-NESTJS.md) and fol
 ```
 
 - Count from recipient (GET): <http://localhost:3000/notifications/count/from/0dc9af21-4915-4908-b8b1-779a7cad9629>
+
+```json
+{
+  "count": 2
+}
+```
+
 - Get content from recipient (GET): <http://localhost:3000/notifications/from/0dc9af21-4915-4908-b8b1-779a7cad9629>
+
+```json
+{
+  "notifications": [
+    {
+      "id": "e44e7c26-8939-4d22-8834-c539ba2d0949",
+      "content": "Você tem conta pra pagar",
+      "category": "mega",
+      "recipientId": "0dc9af21-4915-4908-b8b1-779a7cad9629"
+    },
+    {
+      "id": "e92af443-40fd-4c86-90a2-069a4cd3b9bf",
+      "content": "Você tem conta pra pagar",
+      "category": "mega",
+      "recipientId": "0dc9af21-4915-4908-b8b1-779a7cad9629"
+    }
+  ]}
+```
+
 - Cancel notification (PATCH): <http://localhost:3000/notifications/0dc9af21-4915-4908-b8b1-779a7cad9629/cancel>
 - Mark as read notification (PATCH): <http://localhost:3000/notifications/0dc9af21-4915-4908-b8b1-779a7cad9629/read>
 - Mark as unread notification (PATCH): <http://localhost:3000/notifications/0dc9af21-4915-4908-b8b1-779a7cad9629/unread>
