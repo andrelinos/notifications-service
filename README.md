@@ -5,19 +5,19 @@
 <h1 align="center">Notifications Service</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/andrelinos/notifications-service?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/andrelinos/notifications-service?color=44bd32">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/andrelinos/notifications-service?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/andrelinos/notifications-service?color=44bd32">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/andrelinos/notifications-service?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/andrelinos/notifications-service?color=44bd32">
 
-  <img alt="License" src="https://img.shields.io/github/license/andrelinos/notifications-service?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/andrelinos/notifications-service?color=44bd32">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/andrelinos/notifications-service?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/andrelinos/notifications-service?color=44bd32" /> -->
 
-  <img alt="Github forks" src="https://img.shields.io/github/forks/andrelinos/notifications-service?color=56BEB8" />
+  <img alt="Github forks" src="https://img.shields.io/github/forks/andrelinos/notifications-service?color=44bd32" />
 
-  <img alt="Github stars" src="https://img.shields.io/github/stars/andrelinos/notifications-service?color=56BEB8" />
+  <img alt="Github stars" src="https://img.shields.io/github/stars/andrelinos/notifications-service?color=44bd32" />
 </p>
 
 <!-- Status -->
@@ -72,10 +72,10 @@ The following tools were used in this project:
 ### Other tools ###
 
 - [Upstash](https://upstash.com/)
-  - - Create new Cluster
-  - - Insert a name
-  - - Select a region
-  - - Click Create to continue
+    - - Create new Cluster
+    - - Insert a name
+    - - Select a region
+    - - Click Create to continue
 
 ## Requirements ##
 
