@@ -96,7 +96,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 - Access [here](README-NESTJS.md) and follow steps to continue
 
-## Command
+## Commands to use
 
 ```bash
 # Execute application
@@ -106,7 +106,13 @@ $ yarn start
 $ yarn create:producer
 ```
 
-## The server will initialize in the <http://localhost:3000>
+## Url application
+
+The server will initialize in the <http://localhost:3000>
+
+</br>
+</br>
+</br>
 
 ## Routes application ##
 
