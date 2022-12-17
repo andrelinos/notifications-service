@@ -1,1 +1,252 @@
-{"_type":"export","__export_format":4,"__export_date":"2022-12-16T15:23:58.605Z","__export_source":"insomnia.desktop.app:v2022.6.0","resources":[{"_id":"req_d7b0d2a8896e447d9491aaedce2b8de5","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671204177040,"created":1671013366181,"url":"{{ _.host }}/notifications","name":"Create notification unique recipientId","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"recipientId\": \"{% uuid 'v4' %}\",\n\t\"content\": \"Você tem uma nova notificação\",\n\t\"category\": \"mega\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"}],"authentication":{},"metaSortKey":-1671013366181,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"wrk_1cfea7ee38124e03bdd358568533a62a","parentId":null,"modified":1671013349750,"created":1671013008524,"name":"Notifications Service (Ignite Lab)","description":"","scope":"collection","_type":"workspace"},{"_id":"req_f2e64ed623e44956853c2bec53163799","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671204174329,"created":1671204053381,"url":"{{ _.host }}/notifications","name":"Create notification for recipient Id","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"recipientId\": \"{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24ucmVjaXBpZW50SWQ=::46b', 'no-history', 60 %}\",\n\t\"content\": \"Você tem uma nova notificação\",\n\t\"category\": \"mega\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"}],"authentication":{},"metaSortKey":-1671013359415.875,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_0d659dcb7e294db68f850bf8ca6a9305","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671198719339,"created":1671198636771,"url":"{{ _.host }}/notifications/count/from/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24ucmVjaXBpZW50SWQ=::46b', 'never', 60 %}","name":"Count from recipient","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1671013352650.75,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d57fef9642584ef0aee634176fa2b1cf","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671198820863,"created":1671198816962,"url":"{{ _.host }}/notifications/from/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24ucmVjaXBpZW50SWQ=::46b', 'never', 60 %}","name":"Get from recipient","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1671013345885.625,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_5e9a501ef5044c9789ddab820799b70d","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671198440387,"created":1671198214152,"url":"{{ _.host }}/notifications/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24uaWQ=::46b', 'no-history', 60 %}/cancel","name":"Cancel notification","description":"","method":"PATCH","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1671013339120.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_40519962e9b249bfae28acf0694327fb","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671198460165,"created":1671198452204,"url":"{{ _.host }}/notifications/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24uaWQ=::46b', 'no-history', 60 %}/read","name":"Read notification","description":"","method":"PATCH","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1670904984300.25,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_046ab9bf8c894e87851fd9bd2861bd47","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671198489139,"created":1671198478510,"url":"{{ _.host }}/notifications/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24uaWQ=::46b', 'no-history', 60 %}/unread","name":"UnRead notification","description":"","method":"PATCH","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1670850806890.125,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_24f88e9c0a3c1d7b54fc4fdda2b71909dedf1cd8","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671198072502,"created":1671013008528,"name":"Base Environment","data":{"base_url":"http://localhost:3000"},"dataPropertyOrder":{"&":["base_url"]},"color":null,"isPrivate":false,"metaSortKey":1671013008528,"_type":"environment"},{"_id":"jar_24f88e9c0a3c1d7b54fc4fdda2b71909dedf1cd8","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671013008529,"created":1671013008529,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_0d50422301b040ff9f136253c1c0313e","parentId":"wrk_1cfea7ee38124e03bdd358568533a62a","modified":1671013008525,"created":1671013008525,"fileName":"Lab-notifications","contents":"","contentType":"yaml","_type":"api_spec"},{"_id":"env_8febf5557c004173b10fbfc54b290183","parentId":"env_24f88e9c0a3c1d7b54fc4fdda2b71909dedf1cd8","modified":1671198109413,"created":1671198060220,"name":"dev","data":{"host":"http://localhost:3000"},"dataPropertyOrder":{"&":["host"]},"color":"#23e764","isPrivate":false,"metaSortKey":1671198060220,"_type":"environment"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-12-16T15:23:58.605Z",
+  "__export_source": "insomnia.desktop.app:v2022.6.0",
+  "resources": [
+    {
+      "_id": "req_d7b0d2a8896e447d9491aaedce2b8de5",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671204177040,
+      "created": 1671013366181,
+      "url": "{{ _.host }}/notifications",
+      "name": "Create notification unique recipientId",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"recipientId\": \"{% uuid 'v4' %}\",\n\t\"content\": \"You have a new notification\",\n\t\"category\": \"mega\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1671013366181,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "parentId": null,
+      "modified": 1671013349750,
+      "created": 1671013008524,
+      "name": "Notifications Service (Ignite Lab)",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_f2e64ed623e44956853c2bec53163799",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671204174329,
+      "created": 1671204053381,
+      "url": "{{ _.host }}/notifications",
+      "name": "Create notification for recipient Id",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"recipientId\": \"{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24ucmVjaXBpZW50SWQ=::46b', 'no-history', 60 %}\",\n\t\"content\": \"You have a new notification\",\n\t\"category\": \"mega\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1671013359415.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0d659dcb7e294db68f850bf8ca6a9305",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671198719339,
+      "created": 1671198636771,
+      "url": "{{ _.host }}/notifications/count/from/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24ucmVjaXBpZW50SWQ=::46b', 'never', 60 %}",
+      "name": "Count from recipient",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671013352650.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d57fef9642584ef0aee634176fa2b1cf",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671198820863,
+      "created": 1671198816962,
+      "url": "{{ _.host }}/notifications/from/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24ucmVjaXBpZW50SWQ=::46b', 'never', 60 %}",
+      "name": "Get from recipient",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671013345885.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5e9a501ef5044c9789ddab820799b70d",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671198440387,
+      "created": 1671198214152,
+      "url": "{{ _.host }}/notifications/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24uaWQ=::46b', 'no-history', 60 %}/cancel",
+      "name": "Cancel notification",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1671013339120.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_40519962e9b249bfae28acf0694327fb",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671198460165,
+      "created": 1671198452204,
+      "url": "{{ _.host }}/notifications/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24uaWQ=::46b', 'no-history', 60 %}/read",
+      "name": "Read notification",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1670904984300.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_046ab9bf8c894e87851fd9bd2861bd47",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671198489139,
+      "created": 1671198478510,
+      "url": "{{ _.host }}/notifications/{% response 'body', 'req_d7b0d2a8896e447d9491aaedce2b8de5', 'b64::JC5ub3RpZmljYXRpb24uaWQ=::46b', 'no-history', 60 %}/unread",
+      "name": "UnRead notification",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1670850806890.125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_24f88e9c0a3c1d7b54fc4fdda2b71909dedf1cd8",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671198072502,
+      "created": 1671013008528,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1671013008528,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_24f88e9c0a3c1d7b54fc4fdda2b71909dedf1cd8",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671013008529,
+      "created": 1671013008529,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_0d50422301b040ff9f136253c1c0313e",
+      "parentId": "wrk_1cfea7ee38124e03bdd358568533a62a",
+      "modified": 1671013008525,
+      "created": 1671013008525,
+      "fileName": "Lab-notifications",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_8febf5557c004173b10fbfc54b290183",
+      "parentId": "env_24f88e9c0a3c1d7b54fc4fdda2b71909dedf1cd8",
+      "modified": 1671198109413,
+      "created": 1671198060220,
+      "name": "dev",
+      "data": {
+        "host": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "host"
+        ]
+      },
+      "color": "#23e764",
+      "isPrivate": false,
+      "metaSortKey": 1671198060220,
+      "_type": "environment"
+    }
+  ]
+}

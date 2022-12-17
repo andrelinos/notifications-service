@@ -67,6 +67,15 @@ The following tools were used in this project:
 - [Jest.js](https://jestjs.io/)
 - [Prisma](https://www.prisma.io/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Kafka.js](https://kafka.js.org/)
+
+### Other tools ###
+
+- [Upstash](https://upstash.com/)
+-- Create new Cluster
+-- Insert a name
+-- Select a region
+-- Click Create to continue
 
 ## Requirements ##
 
@@ -86,6 +95,16 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
   ```
 
 - Access [here](README-NESTJS.md) and follow steps to continue
+
+## Command
+
+```bash
+# Execute application
+$ yarn start
+
+# Create a new notification message
+$ yarn create:producer
+```
 
 ## The server will initialize in the <http://localhost:3000>
 
